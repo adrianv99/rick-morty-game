@@ -3,8 +3,9 @@ import Character from './character.js';
 import Score from './score.js';
 
 let character;
+const startPoints = !localStorage.getItem('points') ? 0 : localStorage.getItem('points');
 const api = new API();
-const score = new Score({ startPoints: 0});
+const score = new Score({ startPoints });
 const $aliveBtn = document.querySelector('#alive');
 const $deadBtn = document.querySelector('#dead');
 
