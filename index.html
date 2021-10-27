@@ -20,13 +20,7 @@
                 </div>
                 <div id="name-container">
                 </div>
-                <div class="flex flex-wrap mt-5 text-center justify-center items-center">
-                    <button id='alive' class="my-5 sm:my-0 px-8 py-2 bg-blue-900 hover:bg-blue-700 transition easy-in-out duration-500 text-white font-semibold sm:mr-9"> 
-                        Alive 
-                    </button>
-                    <button id='dead' class="my-5 sm:my-0 px-8 py-2 bg-blue-900 hover:bg-blue-700 transition easy-in-out duration-500 text-white font-semibold"> 
-                        Dead 
-                    </button>
+                <div id="answer-container" class="flex flex-wrap mt-5 text-center justify-center items-center">
                 </div>
                 <div id="score-container">
                     <h2 class="text-3xl font-semibold mt-8">Score: 30</h2>
@@ -34,7 +28,7 @@
             </div>
         </section>
 
-        <footer class="flex items-center justify-center mt-10 bt-3 font-semibold text-2xl text-blue-300">
+        <footer class="flex items-center justify-center my-10 bt-3 font-semibold text-2xl text-blue-300">
             <a href="https://www.instagram.com/adrianvns/" class="hover:text-white cursor-pointer transition easy-in-out duration-500 mx-3">
                 <span class="iconify" data-icon="ant-design:instagram-outlined" data-inline="false"></span>
             </a>
@@ -49,5 +43,33 @@
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <!-- App -->
     <script type="module" src="js/app.js"></script>
+
+    <style>
+        /* loading spinner styles */
+        .lds-dual-ring {
+            display: inline-block;
+            width: 80px;
+            height: 80px;
+        }
+        .lds-dual-ring:after {
+            content: " ";
+            display: block;
+            width: 64px;
+            height: 64px;
+            margin: 8px;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            border-color: #fff transparent #fff transparent;
+            animation: lds-dual-ring 1.2s linear infinite;
+        }
+        @keyframes lds-dual-ring {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </body>
 </html>
